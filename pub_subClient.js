@@ -1,9 +1,9 @@
-const Broker = "mqtt:mqttBroker";
+const Broker = "mqtt:research.upb.edu";
 const TopicName = "upb/lecture/ds/chat";
 const Client = "Zambrana-Vargas";
 
 var MQTT = require("mqtt");
-var client  = MQTT.connect(Broker, {clientId: Client});
+var client  = MQTT.connect(Broker);
 
 client.subscribe(TopicName);
 
