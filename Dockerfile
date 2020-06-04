@@ -6,3 +6,5 @@ WORKDIR /app
 COPY . /app
 
 RUN npm install
+
+CMD [ "node", "pub_subClient.js" ]
