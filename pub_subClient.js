@@ -14,12 +14,6 @@ client.on("connect", function(){
 
 client.on("message", MessageReceived)
 
-//Funcion que se subscribe al topico
-function Connected()
-{
-  client.subscribe(Topic);
-}
-
 //Funcion que recibe los mensajes
 function MessageReceived(topic, message)
 {
