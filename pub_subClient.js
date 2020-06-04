@@ -9,7 +9,7 @@ client.subscribe(TopicName);
 
 client.on("connect", function(){
     setInterval(function(){ 
-        console.log("Send Message")
+        //console.log("Send Message")
         client.publish(TopicName, getJSON());
     }, 5000);
 });
@@ -19,7 +19,7 @@ client.on("message", MessageReceived)
 //Funcion que recibe los mensajes
 function MessageReceived(topic, message)
 {
-  console.log("Recieved:")
+  //console.log("Recieved:")
   console.log(message.toString());
   console.log("");
 }
