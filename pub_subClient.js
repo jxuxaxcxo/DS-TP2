@@ -1,22 +1,25 @@
-const Broker = "mqtt:research.upb.edu";
+const Broker = "mqtt:mqttBroker";
 const TopicName = "upb/lecture/ds/chat";
-const Client = "Zambrana-Vargas2";
+const Client = "Zambrana-Vargas";
 
 var MQTT = require("mqtt");
 var client  = MQTT.connect(Broker, {clientId: Client});
 
+client.subscribe(TopicName);
+
 client.on("connect", function(){
     setInterval(function(){ 
+        console.log("Send Message")
         client.publish(TopicName, getJSON());
     }, 5000);
-}); 
+});
 
-client.subscribe(TopicName);
 client.on("message", MessageReceived)
 
 //Funcion que recibe los mensajes
 function MessageReceived(topic, message)
 {
+  console.log("Recieved:")
   console.log(message.toString());
   console.log("");
 }
