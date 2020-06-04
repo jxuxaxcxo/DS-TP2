@@ -34,10 +34,10 @@ function getJSON(){
   var dates = ["Mon","Tue","Wed","Thu","Wed","Fri","Sat","Sun"]
   var months = ["Jan","Feb","Apr","Mar","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 
-  var ip = "127.0.0.1"
+  var ip = require('ip');
 
   var name = "Dugstein"
-  var json = `{ \"time\" : \"${dates[day]} ${months[month]} ${date} ${hours}:${minutes}:${seconds}-${miliSeconds} ${year}\", \"name\" : ${name}, \"ip\" : \"${ip}\"}`
+  var json = `{ \"time\" : \"${dates[day]} ${months[month]} ${date} ${hours}:${minutes}:${seconds}-${miliSeconds} ${year}\", \"name\" : ${name}, \"ip\" : \"${ip.address}\"}`
 
   return json;
 }
