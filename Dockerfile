@@ -1,6 +1,8 @@
-FROM ubuntu
+FROM alpine:latest
 
-RUN apt-get update
-RUN apt-get install curl -y
-RUN apt-get install nodejs -y
-RUN node --version
+RUN apk add --no-cache nodejs npm
+
+WORKDIR /app
+COPY . /app
+
+RUN npm install
