@@ -1,0 +1,22 @@
+{
+  "name": "ds-tp2",
+  "version": "1.0.0",
+  "description": "TP2-Sistema Distribuidos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jxuxaxcxo/DS-TP2.git"
+  },
+  "author": "Will, Juaco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jxuxaxcxo/DS-TP2/issues"
+  },
+  "homepage": "https://github.com/jxuxaxcxo/DS-TP2#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
