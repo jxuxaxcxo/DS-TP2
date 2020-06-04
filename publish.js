@@ -5,11 +5,13 @@ const Client = "publish.js";
 var MQTT = require("mqtt");
 var client  = MQTT.connect(Broker, {clientId: Client});
 
-client.on("connect", Connected);
+client.on("connect", function(){
+    setInterval(function(){ 
+        console.log("Message Sent")
+        client.publish(TopicName, "Example");
+    }, 5000);
+}); 
 
-//Funcion que publica el mensaje
-function Connected()
-{
-  client.publish(TopicName, "Los Dugsteins");
-  client.end();
-}
+
+
+
