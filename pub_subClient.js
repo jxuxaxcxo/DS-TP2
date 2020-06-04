@@ -1,4 +1,4 @@
-const Broker = "mqtt:research.upb.edu";
+const Broker = "mqtt:mqttBroker";
 const TopicName = "upb/lecture/ds/chat";
 const Client = "Zambrana-Vargas";
 
