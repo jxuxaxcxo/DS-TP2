@@ -1,14 +1,15 @@
-const BROKER_URL = "mqtt:research.upb.edu";
-const TOPIC_NAME = "upb/lecture/ds/chat";
-const CLIENT_ID = "publish.js";
+const Broker = "mqtt:research.upb.edu";
+const TopicName = "upb/lecture/ds/chat";
+const Client = "publish.js";
 
 var MQTT = require("mqtt");
-var client  = MQTT.connect(BROKER_URL, {clientId: CLIENT_ID});
+var client  = MQTT.connect(Broker, {clientId: Client});
 
-client.on("connect", onConnected);
+client.on("connect", Connected);
 
-function onConnected()
+//Funcion que publica el mensaje
+function Connected()
 {
-  client.publish(TOPIC_NAME, "Duga Gay");
+  client.publish(TopicName, "Los Dugsteins");
   client.end();
 }
