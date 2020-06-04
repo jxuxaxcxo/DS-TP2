@@ -7,11 +7,25 @@ var client  = MQTT.connect(Broker, {clientId: Client});
 
 client.on("connect", function(){
     setInterval(function(){ 
-        console.log("Message Sent")
         client.publish(TopicName, getJSON());
+        client.subscribe(TopicName);
     }, 5000);
 }); 
 
+client.on("message", MessageReceived)
+
+//Funcion que se subscribe al topico
+function Connected()
+{
+  client.subscribe(Topic);
+}
+
+//Funcion que recibe los mensajes
+function MessageReceived(topic, message)
+{
+  console.log(message.toString());
+  console.log("");
+}
 function getJSON(){
   var d = new Date();
   var year = d.getFullYear();
