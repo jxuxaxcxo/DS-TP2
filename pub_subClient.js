@@ -37,7 +37,7 @@ function getJSON(){
   var ip = require('ip');
 
   var name = "Dugstein"
-  var json = `{ \"time\" : \"${dates[day]} ${months[month]} ${date} ${hours}:${minutes}:${seconds}-${miliSeconds} ${year}\", \"name\" : ${name}, \"ip\" : \"${ip.address}\"}`
+  var json = `{ \"time\" : \"${dates[day]} ${months[month]} ${date} ${hours}:${minutes}:${seconds}-${miliSeconds} ${year}\", \"name\" : ${name}, \"ip\" : \"${ip.address()}\"}`
 
   return json;
 }
